@@ -1,0 +1,35 @@
+body * {
+  font-family:arial;
+}
+
+#mainLogo {
+  float:left;
+  margin: 8% 0 0 10%;
+}
+
+#mainSideContent {
+  margin:8% 0 0 15%;
+  float: left;
+  width: 30%;
+}
+
+.quickMenuSection {
+  display:block;
+  margin-bottom: 15px;
+}
+
+.qm-icon {
+  float: left;
+}
+
+.homeHeader h3 {
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #79232E;
+  font-weight: bold;
+}
+
+.homeHeader p {
+  color: #271400;
+}
