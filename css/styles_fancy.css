@@ -2,27 +2,65 @@ body * {
   font-family:arial;
 }
 
+#mainPageContent {
+  padding-top: 8%;
+  padding-bottom: 8%;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+69,bababa+100 */
+  background: #ffffff; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #ffffff 69%, #bababa 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%,#ffffff 69%,#bababa 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #ffffff 0%,#ffffff 69%,#bababa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#bababa',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+#mainPageContent a {
+  text-decoration:none;
+  transition: color 0.5s ease;
+  color: #271400;
+}
+
+#mainPageContent a .fa, #bookButton {
+  transition: color 0.5s ease;
+}
+
+#mainPageContent a:hover .fa {
+  color: #C49E4F;
+}
+
 #mainLogo {
-  float:left;
-  margin: 8% 0 0 10%;
+  display:inline-block;
+  margin: 0 0 0 10%;
+  width:30%;
+}
+
+#mainLogo img {
+  width:100%;
+  max-width: 400px;
 }
 
 #mainSideContent {
-  margin:8% 0 0 15%;
-  float: left;
+  margin:0 0 0 15%;
+  display:inline-block;
   width: 30%;
+  vertical-align: top;
+  margin-top: 50px; /* temporary! */
 }
 
 .quickMenuSection {
   display:block;
   margin-bottom: 15px;
+  position:relative;
+  cursor:pointer;
 }
 
 .qm-icon {
   float: left;
+  position: absolute;
+  left: -75px;
 }
 
-.homeHeader h3 {
+.homeHeader h3, h4 {
   font-size: 18px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -30,6 +68,194 @@ body * {
   font-weight: bold;
 }
 
-.homeHeader p {
+.homeHeader p, .sectionContent-left p, .sectionContent-right p  {
   color: #271400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: justify;
+}
+
+#aboutSectionBannerImage {
+  background-image:url('../images/izzy_closeup.jpg');
+  min-height:350px;
+  width:100%;
+  background-position: center -250px;
+  background-repeat: no-repeat;
+}
+
+#locationSectionBannerImage {
+  background-image:url('../images/shopfront.png');
+  min-height:350px;
+  width:100%;
+  background-position: center -150px;
+  background-repeat: no-repeat;
+}
+
+.bannerHeaderWrapper {
+  width:80%;
+  margin-left:10%;
+}
+
+.bannerHeader {
+  border: 5px solid #C49E4F;
+  display: inline-block;
+  padding: 10px;
+  font-size: 26px;
+  text-transform: capitalize;
+  position: relative;
+  top: -27px;
+  color: #C49E4F;
+  letter-spacing: 3px;
+  background-color:white;
+}
+
+.sectionContent-left, .sectionContent-right {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.sectionContent-left {
+  margin-left: 10%;
+}
+
+#bookButton {
+  background-color: #79232E;
+  display: inline-block;
+  padding: 10px;
+  letter-spacing: 2px;
+  color: #271400;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#aboutSection, #locationSection {
+  padding-bottom: 120px;
+}
+
+#themap {
+  margin-left:10%;
+  margin-top:30px;
+}
+
+@media screen and (min-width: 981px) {
+  .homeHeader h3, h4 {
+    font-size: 22px;
+  }
+
+  .homeHeader p, .sectionContent-left p, .sectionContent-right p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+  .homeHeader h3, h4 {
+    font-size: 18px;
+  }
+
+  .homeHeader p, .sectionContent-left p, .sectionContent-right p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+/* Stack the elements, we're going mobile! */
+@media screen and (min-width: 640px) and (max-width: 767px) {
+  #mainLogo {
+    width:100%;
+    text-align:center;
+    margin-left: 0px;
+  }
+
+  .homeHeader h3, h4 {
+    font-size: 22px;
+  }
+
+  .homeHeader p, .sectionContent-left p, .sectionContent-right p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  #mainPageContent a {
+    padding-right: 50px;
+    padding-left: 75px;
+  }
+
+  .qm-icon {
+    left: -20px;
+  }
+
+  #mainSideContent {
+    width: 80%;
+  }
+
+  #bookButton {
+    padding: 10px;
+    margin-left: 75px;
+  }
+
+  .sectionContent-left {
+    display: block;
+    width: 80%;
+  }
+
+  .sectionContent-right {
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 25px;
+  }
+}
+
+
+@media screen and (max-width: 639px) { /* and (min-width: 480px)  */
+  #mainLogo {
+    width:100%;
+    text-align:center;
+    margin-left: 0px;
+  }
+
+  #mainLogo img {
+    max-width: 290px;
+  }
+
+  .homeHeader h3, h4 {
+    font-size: 13px;
+  }
+
+  .homeHeader p, .sectionContent-left p, .sectionContent-right p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  #mainPageContent a {
+    padding-right: 50px;
+    padding-left: 75px;
+  }
+
+  .qm-icon {
+    left: -20px;
+  }
+
+  #mainSideContent {
+    width: 80%;
+  }
+
+  #bookButton {
+    padding: 10px;
+    margin-left: 75px;
+  }
+
+  .sectionContent-left {
+    display: block;
+    width: 80%;
+  }
+
+  .sectionContent-right {
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 25px;
+  }
 }
